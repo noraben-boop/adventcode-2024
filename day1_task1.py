@@ -1,9 +1,9 @@
-import pandas as pd
+import numpy as np
 
-location_list = pd.read_csv('day1_task1.csv')
+location_list = np.genfromtxt('day1_task1.csv', delimiter=',')
 
-first_list = location_list.iloc[:, 0].sort_values().reset_index(drop=True)
-second_list = location_list.iloc[:, 1].sort_values().reset_index(drop=True)
+first_list = location_list.[:, 0]
+second_list = location_list.[:, 1]
 
 
 
